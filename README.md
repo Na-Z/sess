@@ -2,7 +2,7 @@
 Created by <a href="https://github.com/Na-Z" target="_blank">Na Zhao</a> from 
 <a href="http://www.nus.edu.sg/" target="_blank">National University of Singapore</a>
 
-![teaser](https://github.com/Na-Z/sess/blob/master/teaser.pdf)
+![teaser](https://github.com/Na-Z/sess/blob/master/teaser.jpg)
 
 ## Introduction
 This repository contains the PyTorch implementation for our CVPR 2020 Paper 

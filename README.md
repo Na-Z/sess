@@ -22,9 +22,10 @@ demonstrate the effectiveness of SESS in both inductive and transductive semi-su
 achieves competitive performance compared to the state-of-the-art fully-supervised method by using only 50% labeled data.
 
 ## Setup
-- Install `python` --This repo is tested with `python 3.6.8`
+- Install `python` --This repo is tested with `python 3.6.8`.
 - Install `pytorch` with CUDA -- This repo is tested with `torch 1.1`, `CUDA 9.0`. 
 It may wrk with newer versions, but that is not gauranteed.
+- Install `tensorflow` (for Tensorboard) -- This repo is tested with `tensorflow 1.14`.
 - Compile the CUDA layers for PointNet++, which is used in the backbone network:
     ```
     cd pointnet2
@@ -50,7 +51,7 @@ For ScanNet, using the following command to train and evaluate:
     
     python scripts/run_sess_scannet.py
 
-We have included the pretaining phase, training phase, and two evaluation phases 
+Note that we have included the pretaining phase, training phase, and two evaluation phases 
  (inductive and transductive semi-supervised learning) as four functions in each script. 
 You are free to uncomment any function execution line to skip the corresponding phase. 
 

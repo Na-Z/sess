@@ -1,0 +1,7 @@
+tensorflow==1.14
+matplotlib
+opencv-python
+plyfile
+trimesh==2.35.39
+mayavi
+sklearn

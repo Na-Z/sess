@@ -30,7 +30,7 @@ MEAN_COLOR_RGB = np.array([109.8, 97.2, 83.8])
 class ScannetDetectionDataset(Dataset):
        
     def __init__(self, split_set='train', labeled_ratio=0.1, labeled_sample_list=None, num_points=20000,
-                        use_color=False, use_height=False, augment=False, remove_obj=False):
+                        use_color=False, use_height=False, augment=False, remove_obj=False, test_transductive=False):
 
         print('--------- DetectionDataset ', split_set, ' Initialization ---------')
         self.data_path = os.path.join(BASE_DIR, 'scannet_train_detection_data')
@@ -61,9 +61,19 @@ class ScannetDetectionDataset(Dataset):
 
         # construct labeled and unlabeled samples for training
         if split_set == 'train':
-            self.labeled_ratio = labeled_ratio
-            self.labeled_sample_list = labeled_sample_list
-            self.get_labeled_samples()
+            if test_transductive:
+                if labeled_sample_list is not None:
+                    labeled_scan_names = [x.strip() for x in open(
+                        os.path.join(self.raw_data_path, labeled_sample_list)).readlines()]
+                    self.scan_names = list(set(self.scan_names) - set(labeled_scan_names))
+                    print('\tGet {} unlabeled scans for transductive learning'.format(len(self.scan_names)))
+                else:
+                    print('Unknown labeled sample list: %s. Exiting...' % labeled_sample_list)
+                    exit(-1)
+            else:
+                self.labeled_ratio = labeled_ratio
+                self.labeled_sample_list = labeled_sample_list
+                self.get_labeled_samples()
        
     def __len__(self):
         return len(self.scan_names)

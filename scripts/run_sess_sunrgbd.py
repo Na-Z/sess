@@ -33,7 +33,7 @@ def eval_inductive(labeled_ratio=0.1):
         + ' --checkpoint_path=' + './log_scannet/sess_%.1f/checkpoint.tar' %labeled_ratio \
         + ' --dump_dir=./dump_sunrgbd/sess_%.1f' %labeled_ratio \
         + ' --use_3d_nms'  \
-        + ' --use_class_nms' \
+        + ' --use_cls_nms' \
         + ' --per_class_proposal' \
         + ' --dump_files' \
 
@@ -48,7 +48,7 @@ def eval_transductive(labeled_ratio=0.1):
         + ' --checkpoint_path=' + './log_scannet/sess_%.1f/checkpoint.tar' %labeled_ratio \
         + ' --dump_dir=./dump_sunrgbd/sess_%.1f' %labeled_ratio \
         + ' --use_3d_nms'  \
-        + ' --use_class_nms' \
+        + ' --use_cls_nms' \
         + ' --per_class_proposal' \
         + ' --transductive' \
 

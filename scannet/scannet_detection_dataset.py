@@ -64,7 +64,7 @@ class ScannetDetectionDataset(Dataset):
             if test_transductive:
                 if labeled_sample_list is not None:
                     labeled_scan_names = [x.strip() for x in open(
-                        os.path.join(self.raw_data_path, labeled_sample_list)).readlines()]
+                        os.path.join(ROOT_DIR, 'scannet/meta_data', labeled_sample_list)).readlines()]
                     self.scan_names = list(set(self.scan_names) - set(labeled_scan_names))
                     print('\tGet {} unlabeled scans for transductive learning'.format(len(self.scan_names)))
                 else:

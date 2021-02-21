@@ -30,7 +30,7 @@ def eval_inductive(labeled_ratio=0.1):
     command = 'CUDA_VISIBLE_DEVICES=%d python eval.py' %GPU_ID \
         + ' --dataset=sunrgbd' \
         + ' --labeled_sample_list=sunrgbd_v1_train_%.1f.txt'  %labeled_ratio \
-        + ' --checkpoint_path=' + './log_scannet/sess_%.1f/checkpoint.tar' %labeled_ratio \
+        + ' --checkpoint_path=' + './log_sunrgbd/sess_%.1f/checkpoint.tar' %labeled_ratio \
         + ' --dump_dir=./dump_sunrgbd/sess_%.1f' %labeled_ratio \
         + ' --use_3d_nms'  \
         + ' --use_cls_nms' \
@@ -45,7 +45,7 @@ def eval_transductive(labeled_ratio=0.1):
     command = 'CUDA_VISIBLE_DEVICES=%d python eval.py' %GPU_ID \
         + ' --dataset=sunrgbd' \
         + ' --labeled_sample_list=sunrgbd_v1_train_%.1f.txt'  %labeled_ratio \
-        + ' --checkpoint_path=' + './log_scannet/sess_%.1f/checkpoint.tar' %labeled_ratio \
+        + ' --checkpoint_path=' + './log_sunrgbd/sess_%.1f/checkpoint.tar' %labeled_ratio \
         + ' --dump_dir=./dump_sunrgbd/sess_%.1f' %labeled_ratio \
         + ' --use_3d_nms'  \
         + ' --use_cls_nms' \

@@ -51,7 +51,7 @@ parser.add_argument('--lr_decay_steps', default='80',
                                             help='When to decay the learning rate (in epochs) [default: 80]')
 parser.add_argument('--lr_decay_rates', default='0.1', help='Decay rates for lr decay [default: 0.1]')
 
-parser.add_argument('--ema-decay',  type=float,  default=0.999, metavar='ALPHA', help='ema variable decay rate (default: 0.999)')
+parser.add_argument('--ema_decay',  type=float,  default=0.999, metavar='ALPHA', help='ema variable decay rate (default: 0.999)')
 parser.add_argument('--consistency_weight', type=float, default=10.0, metavar='WEIGHT', help='use consistency loss with given weight (default: None)')
 parser.add_argument('--consistency_rampup', type=int,  default=30,  metavar='EPOCHS', help='length of the consistency loss ramp-up')
 

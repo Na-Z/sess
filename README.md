@@ -7,8 +7,7 @@ Created by <a href="https://github.com/Na-Z" target="_blank">Na Zhao</a> from
 ## Introduction
 This repository contains the PyTorch implementation for our CVPR 2020 Paper 
 "SESS: Self-Ensembling Semi-Supervised 3D Object Detection" by Na Zhao, Tat Seng Chua, Gim Hee Lee 
-[[paper](http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhao_SESS_Self-Ensembling_Semi-Supervised_3D_Object_Detection_CVPR_2020_paper.pdf) 
-| [supp](http://openaccess.thecvf.com/content_CVPR_2020/supplemental/Zhao_SESS_Self-Ensembling_Semi-Supervised_CVPR_2020_supplemental.pdf)]
+[[paper](https://arxiv.org/pdf/1912.11803.pdf)]
 
 The performance of existing point cloud-based 3D object detection methods heavily relies on large-scale high-quality 3D 
 annotations. However, such annotations are often tedious and expensive to collect. Semi-supervised learning is a good 
@@ -67,7 +66,7 @@ Please cite our paper if it is helpful to your research:
     }
 
 
-## Acknowledgements
+## Acknowledgement
 Our implementation leverages on the source code from the following repositories:
 - [Deep Hough Voting for 3D Object Detection in Point Clouds](https://github.com/facebookresearch/votenet)
 - [Mean teachers are better role models](https://github.com/CuriousAI/mean-teacher)
